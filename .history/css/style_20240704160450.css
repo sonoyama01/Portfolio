@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+body {
+  line-height: 1.75;
+  color: #240d00;
+  font-family: "BIZ UDPMincho,游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+  font-feature-settings: "plat";
+  scroll-behavior: smooth;
+}
