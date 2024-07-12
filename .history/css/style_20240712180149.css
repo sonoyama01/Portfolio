@@ -69,7 +69,10 @@ body {
 * ========================= */
 h1 {
   width: 162px;
-  margin: 152px auto 13.5px 10%;
+
+  margin-top: 50px;
+  margin-bottom: 13.5px;
+  margin-left: 10%;
 }
 .pc_nav {
   display: none;

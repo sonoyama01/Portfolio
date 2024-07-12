@@ -69,7 +69,8 @@ body {
 * ========================= */
 h1 {
   width: 162px;
-  margin: 152px auto 13.5px 10%;
+  margin-top: 50px;
+  margin-bottom: 13.5px;
 }
 .pc_nav {
   display: none;
@@ -155,11 +156,10 @@ h1 {
 }
 
 .sp_nav ul {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: center; */
-  /* align-items: center; */
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   height: 100%;
 }
 .sp_nav .nav {

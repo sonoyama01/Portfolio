@@ -69,7 +69,8 @@ body {
 * ========================= */
 h1 {
   width: 162px;
-  margin: 152px auto 13.5px 10%;
+  margin-top: 50px;
+  margin-bottom: 13.5px;
 }
 .pc_nav {
   display: none;
@@ -155,11 +156,10 @@ h1 {
 }
 
 .sp_nav ul {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  justify-content: center; */
-  /* align-items: center; */
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   height: 100%;
 }
 .sp_nav .nav {
@@ -175,14 +175,9 @@ h1 {
     sans-serif;
   font-feature-settings: "plat";
   align-items: flex-start;
-  display: inline-block;
-  text-align: left;
 }
 .small_nav_item {
   line-height: 2.5;
-}
-.small_nav_item:last-child {
-  line-height: 5.71;
 }
 .small_nav_item::before {
   content: "-";
