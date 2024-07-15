@@ -12,8 +12,6 @@
 
 body {
   background-image: url("../images/bg_top@2x-80.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   font-size: clamp(
     calc(14 * var(--rem)),
     0.828rem + 0.2vw,
