@@ -51,7 +51,6 @@ body {
 .grid {
   display: grid;
   align-items: center;
-  gap: 40px;
 }
 img {
   display: inline-block;
@@ -192,8 +191,6 @@ h1 {
     0.638rem + 1.01vw,
     calc(150 * var(--rem))
   );
-  line-height: 1;
-  text-align: center;
 }
 .about_ja {
   font-size: clamp(
@@ -201,8 +198,6 @@ h1 {
     0.638rem + 1.01vw,
     calc(24 * var(--rem))
   );
-  line-height: 1.75;
-  display: block;
 }
 
 .name {
@@ -243,15 +238,7 @@ h2 {
 }
 .skill_grid {
   place-items: center;
-}
-.skill_title {
-  text-align: center;
-}
-/* .skill_title.design {
-  margin-top: -5px;
-} */
-.coding_img {
-  margin-bottom: 16px;
+  gap: 40px;
 }
 .skill_item,
 .skill_line {
@@ -295,12 +282,9 @@ footer {
 * コンテナ
 * ========================= */
 @container grid (min-width:600px) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-    gap: 60px;
-  }
+  .about_grid,
   .skill_grid {
-    align-items: flex-start;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   }
 }
 

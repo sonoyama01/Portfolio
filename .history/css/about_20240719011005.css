@@ -42,6 +42,7 @@ body {
   margin: 0 auto;
   container-name: grid;
   container-type: inline-size;
+  margin: 0 auto;
 }
 
 .grid_item {
@@ -51,7 +52,6 @@ body {
 .grid {
   display: grid;
   align-items: center;
-  gap: 40px;
 }
 img {
   display: inline-block;
@@ -192,8 +192,6 @@ h1 {
     0.638rem + 1.01vw,
     calc(150 * var(--rem))
   );
-  line-height: 1;
-  text-align: center;
 }
 .about_ja {
   font-size: clamp(
@@ -201,8 +199,6 @@ h1 {
     0.638rem + 1.01vw,
     calc(24 * var(--rem))
   );
-  line-height: 1.75;
-  display: block;
 }
 
 .name {
@@ -217,7 +213,9 @@ h1 {
 .about_img img {
   max-width: 200px;
 }
-
+.about_grid {
+  row-gap: 20px;
+}
 .intro {
   margin: 0 auto;
 }
@@ -240,18 +238,6 @@ h1 {
 h2 {
   font-size: calc(36 * var(--rem));
   margin-bottom: 40px;
-}
-.skill_grid {
-  place-items: center;
-}
-.skill_title {
-  text-align: center;
-}
-/* .skill_title.design {
-  margin-top: -5px;
-} */
-.coding_img {
-  margin-bottom: 16px;
 }
 .skill_item,
 .skill_line {
@@ -295,12 +281,9 @@ footer {
 * コンテナ
 * ========================= */
 @container grid (min-width:600px) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-    gap: 60px;
-  }
+  .about_grid,
   .skill_grid {
-    align-items: flex-start;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   }
 }
 

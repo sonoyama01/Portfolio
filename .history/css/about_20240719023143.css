@@ -192,7 +192,6 @@ h1 {
     0.638rem + 1.01vw,
     calc(150 * var(--rem))
   );
-  line-height: 1;
   text-align: center;
 }
 .about_ja {
@@ -201,7 +200,6 @@ h1 {
     0.638rem + 1.01vw,
     calc(24 * var(--rem))
   );
-  line-height: 1.75;
   display: block;
 }
 

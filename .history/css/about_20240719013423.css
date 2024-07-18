@@ -192,8 +192,6 @@ h1 {
     0.638rem + 1.01vw,
     calc(150 * var(--rem))
   );
-  line-height: 1;
-  text-align: center;
 }
 .about_ja {
   font-size: clamp(
@@ -201,8 +199,6 @@ h1 {
     0.638rem + 1.01vw,
     calc(24 * var(--rem))
   );
-  line-height: 1.75;
-  display: block;
 }
 
 .name {
@@ -246,12 +242,6 @@ h2 {
 }
 .skill_title {
   text-align: center;
-}
-/* .skill_title.design {
-  margin-top: -5px;
-} */
-.coding_img {
-  margin-bottom: 16px;
 }
 .skill_item,
 .skill_line {
@@ -298,9 +288,6 @@ footer {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: 60px;
-  }
-  .skill_grid {
-    align-items: flex-start;
   }
 }
 
