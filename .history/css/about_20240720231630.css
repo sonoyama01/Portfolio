@@ -155,7 +155,7 @@ img {
 }
 .sp_nav .nav {
   font-size: calc(24 * var(--rem));
-  margin: auto 0;
+  margin: 105px auto;
 }
 
 .sp_nav .small_nav {
