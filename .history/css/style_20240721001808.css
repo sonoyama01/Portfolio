@@ -85,7 +85,7 @@ h1 {
 /* ============================
 * ハンバーガーメニュー
 * ========================= */
-.sp_nav_outer {
+.sp_nav {
   display: none;
 }
 
@@ -170,8 +170,6 @@ h1 {
   justify-content: center;
   text-align: center;
   gap: 60px;
-}
-.sp_nav .nav {
   font-size: calc(24 * var(--rem));
 }
 
@@ -314,9 +312,6 @@ h3 {
   /* bottom: -7.5%; */
   left: 95%;
 }
-#works {
-  margin-bottom: 150px;
-}
 
 /* Contact */
 /* ========================= */
@@ -335,19 +330,13 @@ h3 {
 .contact_item {
   width: 100px;
 }
-#contact {
-  margin-bottom: 150px;
-}
+
 /* ============================
 * footer
 * ========================= */
 footer {
   font-size: calc(10 * var(--rem));
   text-align: center;
-}
-footer small {
-  display: block;
-  padding: 22.5px 0;
 }
 
 .contact {

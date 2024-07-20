@@ -85,7 +85,7 @@ h1 {
 /* ============================
 * ハンバーガーメニュー
 * ========================= */
-.sp_nav_outer {
+.sp_nav {
   display: none;
 }
 
@@ -170,8 +170,6 @@ h1 {
   justify-content: center;
   text-align: center;
   gap: 60px;
-}
-.sp_nav .nav {
   font-size: calc(24 * var(--rem));
 }
 
@@ -346,7 +344,7 @@ footer {
   text-align: center;
 }
 footer small {
-  display: block;
+  /* display: block; */
   padding: 22.5px 0;
 }
 

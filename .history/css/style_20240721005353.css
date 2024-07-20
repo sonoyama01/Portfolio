@@ -85,7 +85,7 @@ h1 {
 /* ============================
 * ハンバーガーメニュー
 * ========================= */
-.sp_nav_outer {
+.sp_nav {
   display: none;
 }
 
@@ -159,9 +159,9 @@ h1 {
   background: rgba(216, 194, 141, 0.8);
   z-index: 1;
   line-height: 1;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .sp_nav ul {

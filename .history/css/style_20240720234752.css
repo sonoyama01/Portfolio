@@ -85,7 +85,7 @@ h1 {
 /* ============================
 * ハンバーガーメニュー
 * ========================= */
-.sp_nav_outer {
+.sp_nav {
   display: none;
 }
 
@@ -159,9 +159,6 @@ h1 {
   background: rgba(216, 194, 141, 0.8);
   z-index: 1;
   line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .sp_nav ul {
@@ -170,9 +167,10 @@ h1 {
   justify-content: center;
   text-align: center;
   gap: 60px;
+  font-size: calc(24 * var(--rem));
+  margin: auto 0;
 }
 .sp_nav .nav {
-  font-size: calc(24 * var(--rem));
 }
 
 .sp_nav .small_nav {
@@ -250,7 +248,7 @@ h2 {
   row-gap: 20px;
 }
 .intro {
-  margin: 0 auto 25px auto;
+  margin: 0 auto;
 }
 .introduce {
   text-align: left;
@@ -258,7 +256,6 @@ h2 {
 
 #about .wrap {
   position: relative;
-  margin-bottom: 150px;
 }
 .more.about {
   position: absolute;
@@ -273,17 +270,12 @@ h3 {
   font-size: calc(24 * var(--rem));
 }
 
-.anchor {
-  margin-bottom: 40px;
-}
-
 .anchor_link {
   grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
 }
 
 .works_grid {
   row-gap: 40px;
-  margin: 0 auto 15px auto;
 }
 
 #others .lang_script {
@@ -311,19 +303,12 @@ h3 {
 }
 .more.others {
   position: absolute;
-  /* bottom: -7.5%; */
+  bottom: -7.5%;
   left: 95%;
-}
-#works {
-  margin-bottom: 150px;
 }
 
 /* Contact */
 /* ========================= */
-#contact p {
-  text-align: center;
-  margin: 40px auto;
-}
 .contact_sp {
   display: flex;
   column-gap: 35px;
@@ -335,19 +320,13 @@ h3 {
 .contact_item {
   width: 100px;
 }
-#contact {
-  margin-bottom: 150px;
-}
+
 /* ============================
 * footer
 * ========================= */
 footer {
   font-size: calc(10 * var(--rem));
   text-align: center;
-}
-footer small {
-  display: block;
-  padding: 22.5px 0;
 }
 
 .contact {

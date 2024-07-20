@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>The Story</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
-    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script>
         (function (d) {
             var config = {
@@ -23,7 +23,7 @@
     <!-- ヘッダー -->
     <header>
         <div class="header_wrap">
-            <div class="logo">
+            <h1 class="logo">
                 <?xml version="1.0" encoding="UTF-8"?>
                 <svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 239.15 128.94">
                     <defs>
@@ -63,30 +63,28 @@
                         </g>
                     </g>
                 </svg>
-            </div>
+            </h1>
             <!-- ハンバーガーメニュー -->
             <div class="ham_btn">
                 <span></span>
             </div>
-            <div class="sp_nav_outer">
-                <nav class="sp_nav lang_en">
-                    <ul class="nav">
-                        <li><a href="index.html">Top</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li class="nav_item"><a href="#works">Works</a>
-                            <div class="small_nav">
-                                <ul>
-                                    <li class="small_nav_item"><a href="web_design.html">Webデザイン</a></li>
-                                    <li class="small_nav_item"><a href="banner.html">バナー</a></li>
-                                    <li class="small_nav_item"><a href="others.html">その他</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="instagram">Instagram</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <nav class="sp_nav lang_en">
+                <ul class="nav">
+                    <li><a href="index.html">Top</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="nav_item"><a href="#works">Works</a>
+                        <div class="small_nav">
+                            <ul>
+                                <li class="small_nav_item"><a href="web_design.html">Webデザイン</a></li>
+                                <li class="small_nav_item"><a href="banner.html">バナー</a></li>
+                                <li class="small_nav_item"><a href="others.html">その他</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="instagram">Instagram</a></li>
+                </ul>
+            </nav>
             <nav class="pc_nav lang_en">
                 <ul class="nav">
                     <li><a href="index.html">Top</a></li>
@@ -100,16 +98,36 @@
     </header>
 
 
+    <!-- メインビジュアル -->
+    <div class="wrap">
+        <div class="mv">
+            <picture>
+                <source srcset="./images/mv.png" media="(min-width:767px)">
+                <img src="./images/mv_sp@3x.png" alt="本のイラスト">
+            </picture>
+        </div>
+        <div class="catch_copy">
+            <p class="catch_copy">ワクワクをカタチに。</p>
+            <p class="sub_catch_copy">～白紙からつくる物語～</p>
+        </div>
+    </div>
 
-    <h1 class="lang_script">About
-        <span class="about_ja">私について</span>
-    </h1>
+    <!-- 足跡 -->
+    <div class="wrap">
+        <div class="mv-about">
+            <picture>
+                <source srcset="./images/footprints1.png" media="(min-width:767px)">
+                <img src="./images/footprints1_sp@3x.png" alt="足跡のイラスト">
+            </picture>
+        </div>
+    </div>
+
+    <!-- About -->
     <section id="about">
         <div class="wrap">
-            <h2>about</h2>
+            <h2 class="lang_en">About</h2>
             <div class="grid about_grid">
-                <div class="about_img grid_item"> <img src="./images/my_photo_sepia@3x.png" alt="私の写真"
-                        class="about_img"></div>
+                <div class="about_img grid_item"> <img src="./images/my_illust.png" alt="私のイラスト"></div>
                 <div class="intro grid_item">
                     <p class="name">
                         園山 彩絵
@@ -123,62 +141,81 @@
 
                 </div>
             </div>
+            <div class="more lang_en about">
+                <a href="about.html">more</a>
+            </div>
         </div>
     </section>
-    <section id="career">
-        <div class="wrap career">
-            <h2>career</h2>
-            <div class="line"></div>
-            <dl>
-                <div class="career_item">
-                    <dt><time datetime="2019-03">2019.03</time></dt>
-                    <dd>岡山理科大学卒業</dd>
-                </div>
-                <div class="career_item">
-                    <dt><time datetime="2019-04">2019.04</time></dt>
-                    <dd>臨床検査技師免許を取得し、
-                        <br class="br_sp">病院で働き始める
-                    </dd>
-                </div>
-                <div class="career_item">
-                    <dt><time datetime="2023-03">2023.03</time></dt>
-                    <dd>第1子を出産</dd>
-                </div>
-                <div class="career_item">
-                    <dt><time datetime="2024-03">2024.04</time></dt>
-                    <dd>育休延長を機に、<br class="br_sp">Webデザインを学び始める</dd>
-                </div>
-            </dl>
-        </div>
-    </section>
-
-    <section id="skill">
+    <section id="works">
         <div class="wrap">
-            <h2 class="lang_en">Skill</h2>
-            <div class="skill_grid grid">
-                <div class="skill_item">
-                    <div class="icon design_img"><img class="design_icon" src="./images/design_icon@3x.png" alt="">
+            <h2 class="lang_en">Works</h2>
+            <nav class="anchor">
+                <ul class="anchor_link grid">
+                    <li class="grid_item"><a href="#web_design">Webデザイン</a></li>
+                    <li class="grid_item"><a href="#banner">バナー</a></li>
+                    <li class="grid_item"><a href="#others">その他</a></li>
+                </ul>
+            </nav>
+            <div id="web_design">
+                <h3>Webデザイン</h3>
+                <div class="grid works_grid">
+                    <div class="grid_item">
+                        <a href="workers.html">
+                            <img src="./images/mokku_workers_sepia.png" alt="workers">
+                        </a>
                     </div>
-                    <p class="skill_title design">デザイン</p>
-                    <p>ユーザビリティの高いデザインとなるよう心がけています。</p>
-                    <img class="skill_line" src="./images/skill_line@3x.png" alt="">
-                    <p>使用ツール<br>
-                        Illustrator / Photoshop</p>
-                </div>
-                <div class="skill_item">
-                    <div class="icon coding_img"><img class="coding_icon" src="./images/coding_icon@3x.png" alt="">
+                    <div class="grid_item"><a href="life_hair_design.html">
+                            <img src="./images/mokku_life_hair_design_sepia.png" alt="Life hair design">
+                        </a>
                     </div>
-                    <p class="skill_title coding">コーディング</p>
-                    <p>HTML/CSS/jQueryを使用してのページが可能です。</p>
-                    <img class="skill_line" src="./images/skill_line@3x.png" alt="">
-                    <p>使用言語・ツール<br>
-                        HTML / CSS / jQuery / Github / VSCode</p>
                 </div>
+                <div class="more lang_en web_design">
+                    <a href="web_design.html">more</a>
+                </div>
+            </div>
+            <div id="banner">
+                <h3>バナー</h3>
+                <div class="grid works_grid">
+                    <div class="grid_item">
+                        <a href="hamburger_pop.html">
+                            <img src="./images/mokku_hamburger_pop_sepia.png" alt="">
+                        </a>
+                    </div>
+                    <div class="grid_item">
+                        <a href="mobile.html">
+                            <img src="./images/mokku_mobile_sepia.png" alt="">
+                        </a>
+                    </div>
+                    <div class="more lang_en banner">
+                        <a href="banner.html">more</a>
+                    </div>
+                </div>
+            </div>
+            <div id="others">
+                <h3>その他</h3>
+                <p class="lang_script">coming soon...</p>
+            </div>
+            <div class="more lang_en others">
+                <a href="others.html">more</a>
             </div>
         </div>
     </section>
 
-
+    <!-- Contact -->
+    <section id="contact">
+        <div class="wrap">
+            <h2 class="lang_en">Contact</h2>
+            <p>お問い合わせはコチラ↓</p>
+            <div class="contact_sp">
+                <div class="contact_item">
+                    <a href="contact.html"><img src="./images/contact_sp@3x.png" alt="コンタクトへのリンク"></a>
+                </div>
+                <div class="contact_item">
+                    <a href=""><img src="./images/instagram_sp@3x.png" alt="Instagramへのリンク"></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- フッター -->
@@ -187,11 +224,10 @@
     <div class="contact">
         <a href="contact.html"><img src="./images/contact@2x.png" alt="contact"></a>
     </div>
+
     <!-- スクリプト -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./script.js"></script>
-
-
 </body>
 
 </html>

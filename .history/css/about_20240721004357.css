@@ -47,14 +47,6 @@ body {
   font-weight: 400;
 }
 
-.more {
-  font-size: clamp(
-    calc(14 * var(--rem)),
-    0.638rem + 1.01vw,
-    calc(24 * var(--rem))
-  );
-}
-
 .wrap {
   max-width: 80%;
   margin: 0 auto;
@@ -69,12 +61,15 @@ body {
 .grid {
   display: grid;
   align-items: center;
+  gap: 40px;
 }
-
+img {
+  display: inline-block;
+}
 /* ============================
 * ヘッダー
 * ========================= */
-h1 {
+.logo {
   width: 162px;
   margin: 50.5px auto 13.5px 10%;
 }
@@ -85,7 +80,7 @@ h1 {
 /* ============================
 * ハンバーガーメニュー
 * ========================= */
-.sp_nav_outer {
+.sp_nav {
   display: none;
 }
 
@@ -159,9 +154,6 @@ h1 {
   background: rgba(216, 194, 141, 0.8);
   z-index: 1;
   line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .sp_nav ul {
@@ -173,6 +165,7 @@ h1 {
 }
 .sp_nav .nav {
   font-size: calc(24 * var(--rem));
+  margin: auto 0;
 }
 
 .sp_nav .small_nav {
@@ -200,45 +193,42 @@ h1 {
 }
 
 /* ============================
-* メインビジュアル
+* MAIN
 * ========================= */
-.mv source {
-  width: 71.5%;
+#about h2,
+#career h2 {
+  display: none;
 }
-.mv img {
-  width: 80%;
+section {
+  margin-bottom: 150px;
 }
-.catch_copy {
-  font-size: calc(24 * var(--rem));
+.logo {
+  display: none;
+}
+h1 {
+  font-size: clamp(
+    calc(72 * var(--rem)),
+    0.638rem + 1.01vw,
+    calc(150 * var(--rem))
+  );
+  line-height: 1;
   text-align: center;
-}
-.sub_catch_copy {
-  font-size: calc(14 * var(--rem));
-}
-
-.mv-about source {
-  width: 26.5%;
-}
-.mv-about img {
-  width: 74.5%;
-}
-.mv-about,
-.mv {
-  text-align: center;
-}
-
-/* ============================
-* Top_About
-* ========================= */
-h2 {
-  font-size: calc(36 * var(--rem));
-  text-align: center;
-}
-#about h2 {
+  margin-top: 54px;
   margin-bottom: 40px;
 }
+.about_ja {
+  font-size: clamp(
+    calc(18 * var(--rem)),
+    0.638rem + 1.01vw,
+    calc(24 * var(--rem))
+  );
+  line-height: 1.75;
+  display: block;
+}
+
 .name {
   font-size: calc(20 * var(--rem));
+  margin-bottom: 40px;
 }
 .name_en.lang_en {
   font-size: calc(12 * var(--rem));
@@ -246,84 +236,73 @@ h2 {
   margin-left: 10px;
 }
 
-.about_grid {
-  row-gap: 20px;
+.about_img img {
+  max-width: 200px;
 }
+
 .intro {
-  margin: 0 auto 25px auto;
+  margin: 0 auto;
 }
 .introduce {
   text-align: left;
 }
 
-#about .wrap {
-  position: relative;
+/* 経歴 */
+/* ========================= */
+.career_img {
+  width: 20px;
+}
+.career {
+  display: flex;
   margin-bottom: 150px;
 }
-.more.about {
-  position: absolute;
-  bottom: -7.5%;
-  left: 95%;
+
+/* Skill */
+/* ========================= */
+h2 {
+  font-size: calc(36 * var(--rem));
+  margin-bottom: 40px;
+  text-align: center;
+}
+.skill_grid {
+  place-items: center;
+}
+.skill_title {
+  text-align: center;
+}
+/* .skill_title.design {
+  margin-top: -5px;
+} */
+.coding_img {
+  margin-bottom: 16px;
+}
+.skill_item,
+.skill_line {
+  width: 250px;
+}
+.icon {
+  text-align: center;
+}
+.design_icon {
+  width: 120.5px;
+}
+.coding_icon {
+  width: 70.5px;
 }
 
 /* ============================
-* Top_Works
+* footer
 * ========================= */
-h3 {
-  font-size: calc(24 * var(--rem));
+footer {
+  font-size: calc(10 * var(--rem));
+  text-align: center;
 }
-
-.anchor {
-  margin-bottom: 40px;
-}
-
-.anchor_link {
-  grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
-}
-
-.works_grid {
-  row-gap: 40px;
-  margin: 0 auto 15px auto;
-}
-
-#others .lang_script {
-  font-size: calc(48 * var(--rem));
-}
-
-#web_design {
-  position: relative;
-}
-.more.web_design {
-  position: absolute;
-  bottom: -7.5%;
-  left: 95%;
-}
-#banner {
-  position: relative;
-}
-.more.banner {
-  position: absolute;
-  bottom: -7.5%;
-  left: 95%;
-}
-#others {
-  position: relative;
-}
-.more.others {
-  position: absolute;
-  /* bottom: -7.5%; */
-  left: 95%;
-}
-#works {
-  margin-bottom: 150px;
+footer small {
+  padding: 22.5px auto;
 }
 
 /* Contact */
 /* ========================= */
-#contact p {
-  text-align: center;
-  margin: 40px auto;
-}
 .contact_sp {
   display: flex;
   column-gap: 35px;
@@ -335,51 +314,19 @@ h3 {
 .contact_item {
   width: 100px;
 }
-#contact {
-  margin-bottom: 150px;
-}
-/* ============================
-* footer
-* ========================= */
-footer {
-  font-size: calc(10 * var(--rem));
-  text-align: center;
-}
-footer small {
-  display: block;
-  padding: 22.5px 0;
-}
-
 .contact {
   display: none;
 }
-
 /* ============================
 * コンテナ
 * ========================= */
 @container grid (min-width:600px) {
-  h2 {
-    text-align: left;
-  }
-
-  .about_grid,
-  .works_grid {
+  .grid {
     grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 60px;
   }
-  .anchor_link {
-    display: flex;
-    justify-content: space-between;
-    width: 38%;
-    margin-left: auto;
-  }
-
-  .more.web_design,
-  .more.banner,
-  .more.others,
-  .more.about {
-    position: absolute;
-    bottom: -5%;
-    left: 100%;
+  .skill_grid {
+    align-items: flex-start;
   }
 }
 
@@ -390,7 +337,8 @@ footer small {
 
   /* ロゴ */
   /* ========================= */
-  h1 {
+  .logo {
+    display: block;
     position: fixed;
     width: 150px;
     top: 155px;
@@ -420,11 +368,16 @@ footer small {
     max-width: 660px;
     margin: 0 10% 0 31.5%;
   }
+  h1 {
+    margin-top: 110px;
+  }
 
-  /* メインビジュアル */
-  /* ========================= */
-  .mv {
-    margin-top: 100px;
+  .career {
+    margin-bottom: 200px;
+  }
+  .career_item {
+    display: flex;
+    margin-bottom: 80px;
   }
 
   /* sp_contact */
@@ -444,7 +397,7 @@ footer small {
     display: block;
     position: fixed;
     text-align: center;
-    bottom: 53px;
+    top: 450px;
     right: 4%;
   }
 }
