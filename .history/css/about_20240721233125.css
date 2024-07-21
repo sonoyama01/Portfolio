@@ -222,7 +222,7 @@ h1 {
 .about_ja {
   font-size: clamp(
     calc(18 * var(--rem)),
-    0.983rem + 0.61vw,
+    0.638rem + 1.01vw,
     calc(24 * var(--rem))
   );
   line-height: 1.75;
@@ -374,6 +374,7 @@ footer small {
     position: fixed;
     width: 150px;
     top: 155px;
+    /* left: 8.4%; */
   }
 
   .pc_nav {

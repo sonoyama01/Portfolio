@@ -374,6 +374,7 @@ footer small {
     position: fixed;
     width: 150px;
     top: 155px;
+    /* left: 8.4%; */
   }
 
   .pc_nav {

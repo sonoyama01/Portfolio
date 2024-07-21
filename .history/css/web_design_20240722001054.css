@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+:root {
+  --min-viewport-width: 375;
+  --max-viewport-width: 1366;
+
+  --min-fluid-ratio: calc(1 / var(--min-viewport-width) * 100dvi);
+  --max-fluid-ratio: calc(1 / var(--max-viewport-width) * 100dvi);
+
+  --rem: 1rem/16;
+}
+
+body {
+  /* ============================
+  * 背景
+  * ========================= */
+  background-image: url("../images/bg_top@2x-80.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  /* ============================
+  * フォント
+  * ========================= */
+  font-size: clamp(
+    calc(14 * var(--rem)),
+    0.828rem + 0.2vw,
+    calc(16 * var(--rem))
+  );
+  line-height: 1.75;
+  color: #240d00;
+  font-family: "BIZ UDPMincho", "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
+    "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
+    sans-serif;
+  font-feature-settings: "plat";
+  scroll-behavior: smooth;
+}
+.lang_en {
+  font-family: "harfang-pro", "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+  font-weight: 400;
+}
+.lang_script {
+  font-family: "p22-marcel-script-pro", "Hiragino Sans W3",
+    "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo,
+    "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 400;
+}
+
+.wrap {
+  max-width: 80%;
+  margin: 0 auto;
+  container-name: grid;
+  container-type: inline-size;
+}
+
+.grid_item {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+  gap: 40px;
+}
+img {
+  display: inline-block;
+}
+/* ============================
+* ヘッダー
+* ========================= */
+.logo {
+  width: 162px;
+  margin: 50.5px auto 13.5px 10%;
+}
+.pc_nav {
+  display: none;
+}
+
+/* ============================
+* MAIN
+* ========================= */
+h1 {
+  font-size: clamp(
+    calc(72 * var(--rem)),
+    2.655rem + 7.87vw,
+    calc(150 * var(--rem))
+  );
+  line-height: 1;
+  text-align: center;
+  margin-top: 54px;
+  margin-bottom: 40px;
+}
+.title_ja {
+  font-size: clamp(
+    calc(18 * var(--rem)),
+    0.983rem + 0.61vw,
+    calc(24 * var(--rem))
+  );
+  line-height: 1.75;
+  display: block;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  width: 74%;
+  margin: 0 auto;
+}
+
+/* ============================
+* コンテナ
+* ========================= */
+@container grid (min-width:600px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 60px;
+  }
+}
+
+/* ============================
+* PC
+* ========================= */
+@media screen and (min-width: 768px) {
+  /* ============================
+  * ヘッダー
+  * ========================= */
+
+  /* ロゴ */
+  /* ========================= */
+  .logo {
+    display: block;
+    position: fixed;
+    width: 150px;
+    top: 155px;
+  }
+  .pc_nav {
+    display: block;
+    font-size: calc(14 * var(--rem));
+    position: fixed;
+    text-align: center;
+    top: 450px;
+    left: 8.4%;
+  }
+
+  /* ============================
+  * MAIN
+  * ========================= */
+  /* コンテンツ幅 */
+  /* ========================= */
+  .wrap {
+    max-width: 660px;
+    margin: 0 10% 0 31.5%;
+  }
+  h1 {
+    margin-top: 110px;
+  }
+}
