@@ -119,21 +119,12 @@ h1 {
 
 /* works */
 /* ========================= */
-section {
-  margin-bottom: 150px;
-}
 h2 {
   display: none;
 }
 .grid {
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 60px;
-}
-.grid_item {
-  row-gap: 120px;
-}
-img {
-  margin-bottom: 20px;
 }
 
 /* ============================
@@ -146,12 +137,6 @@ footer {
 footer small {
   display: block;
   padding: 22.5px 0;
-}
-/* Contact */
-/* ========================= */
-
-.contact {
-  display: none;
 }
 
 /* ============================
@@ -203,36 +188,4 @@ footer small {
   .hide_sp {
     display: block;
   }
-  section {
-    margin-bottom: 2000px;
-  }
-  /* sp_contact */
-  /* ========================= */
-  #contact {
-    display: none;
-  }
-
-  /* ============================
-* フッター
-* ========================= */
-  .contact img {
-    width: 100%;
-  }
-  .contact {
-    width: 7.3%;
-    display: block;
-    position: fixed;
-    text-align: center;
-    bottom: 53px;
-    right: 4%;
-  }
 }
-/* ============================
-* 横スクロールcheck
-* ========================= */
-/* *,
-*::before,
-*::after {
-  outline: 3px solid red;
-  opacity: 1 !important;
-} */

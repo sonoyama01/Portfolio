@@ -129,9 +129,6 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 60px;
 }
-.grid_item {
-  row-gap: 120px;
-}
 img {
   margin-bottom: 20px;
 }

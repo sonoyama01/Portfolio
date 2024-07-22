@@ -119,21 +119,12 @@ h1 {
 
 /* works */
 /* ========================= */
-section {
-  margin-bottom: 150px;
-}
 h2 {
   display: none;
 }
 .grid {
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 60px;
-}
-.grid_item {
-  row-gap: 120px;
-}
-img {
-  margin-bottom: 20px;
 }
 
 /* ============================
@@ -203,9 +194,6 @@ footer small {
   .hide_sp {
     display: block;
   }
-  section {
-    margin-bottom: 2000px;
-  }
   /* sp_contact */
   /* ========================= */
   #contact {
@@ -236,3 +224,5 @@ footer small {
   outline: 3px solid red;
   opacity: 1 !important;
 } */
+
+}
