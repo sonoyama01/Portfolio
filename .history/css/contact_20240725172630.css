@@ -26,7 +26,7 @@ body {
     0.828rem + 0.2vw,
     calc(16 * var(--rem))
   );
-  line-height: 1.875;
+  line-height: 1.75;
   color: #240d00;
   font-family: "BIZ UDPMincho", "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
     "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
@@ -54,22 +54,6 @@ body {
   container-type: inline-size;
 }
 
-.grid_item {
-  text-align: center;
-}
-
-.grid {
-  display: grid;
-  align-items: center;
-  gap: 40px;
-}
-img {
-  display: inline-block;
-  width: 100%;
-}
-.hide_sp {
-  display: none;
-}
 /* ============================
 * ヘッダー
 * ========================= */
@@ -82,8 +66,8 @@ img {
 }
 
 /* ============================
-* ハンバーガーメニュー
-* ========================= */
+  * ハンバーガーメニュー
+  * ========================= */
 .sp_nav_outer {
   display: none;
 }
@@ -202,7 +186,6 @@ img {
 /* ============================
 * MAIN
 * ========================= */
-
 h1 {
   font-size: clamp(
     calc(72 * var(--rem)),
@@ -220,48 +203,27 @@ h1 {
     0.983rem + 0.61vw,
     calc(24 * var(--rem))
   );
-  font-family: "BIZ UDPMincho", "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
-    "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
-    sans-serif;
-  font-feature-settings: "plat";
-  scroll-behavior: smooth;
-  line-height: 1;
+  line-height: 1.75;
   display: block;
 }
 
-.mokku {
-  margin-bottom: 40px;
-  width: 100%;
-}
-.small {
-  font-size: calc(12 * var(--rem));
-  line-height: 1;
-  margin-bottom: 10px;
-}
-h2 {
-  font-size: clamp(
-    calc(18 * var(--rem)),
-    0.983rem + 0.61vw,
-    calc(24 * var(--rem))
-  );
-  line-height: 1;
-  margin-bottom: 40px;
-}
-.intoro {
-  margin-bottom: 50px;
-}
-#intoro img {
-  width: 100%;
-  margin-bottom: 30px;
-}
-.tool {
-  margin-bottom: 130px;
-}
-.tool_item {
+/* お問い合わせフォーム */
+/* ========================= */
+.c-form__item {
   display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
 }
-dt {
-  font-weight: normal;
+.c-form__input {
+  width: 97%;
+  border: solid 1px #333;
+}
+.c-form__label {
+  font-size: calc(14 * var(--rem));
+}
+.c-form__required {
+  font-size: calc(10 * var(--rem));
+  margin-left: 16px;
 }
 
 /* ============================
@@ -276,19 +238,13 @@ footer small {
   padding: 22.5px 0;
 }
 
-/* Contact */
-/* ========================= */
-.contact {
-  display: none;
-}
-
 /* ============================
 * PC
 * ========================= */
 @media screen and (min-width: 1000px) {
   /* ============================
-  * ヘッダー
-  * ========================= */
+    * ヘッダー
+    * ========================= */
 
   /* ロゴ */
   /* ========================= */
@@ -296,14 +252,14 @@ footer small {
     display: block;
     position: fixed;
     width: 150px;
-    top: 11dvh;
+    top: 155px;
   }
   .pc_nav {
     display: block;
     font-size: calc(14 * var(--rem));
     position: fixed;
     text-align: center;
-    top: 59dvh;
+    top: 450px;
     left: 8.4%;
   }
   .pc_nav li {
@@ -316,15 +272,26 @@ footer small {
   }
 
   /* ============================
-  * MAIN
-  * ========================= */
+    * MAIN
+    * ========================= */
   /* コンテンツ幅 */
   /* ========================= */
   .wrap {
     max-width: 660px;
     margin: 0 10% 0 31.5%;
   }
-
+  h1 {
+    margin-top: 110px;
+  }
+  .c-form {
+    max-width: 640px;
+  }
+  .c-form__item {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+  }
   /* ============================
 * フッター
 * ========================= */
@@ -339,4 +306,14 @@ footer small {
     bottom: 53px;
     right: 4%;
   }
+
+  /* ============================
+* 横スクロールcheck
+* ========================= */
+  /* *,
+*::before,
+*::after {
+outline: 3px solid red;
+opacity: 1 !important;
+} */
 }

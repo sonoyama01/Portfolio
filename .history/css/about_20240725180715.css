@@ -26,7 +26,7 @@ body {
     0.828rem + 0.2vw,
     calc(16 * var(--rem))
   );
-  line-height: 1.875;
+  line-height: 1.75;
   color: #240d00;
   font-family: "BIZ UDPMincho", "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
     "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
@@ -65,10 +65,6 @@ body {
 }
 img {
   display: inline-block;
-  width: 100%;
-}
-.hide_sp {
-  display: none;
 }
 /* ============================
 * ヘッダー
@@ -202,7 +198,16 @@ img {
 /* ============================
 * MAIN
 * ========================= */
-
+#about h2,
+#career h2 {
+  display: none;
+}
+section {
+  margin-bottom: 150px;
+}
+.logo {
+  display: none;
+}
 h1 {
   font-size: clamp(
     calc(72 * var(--rem)),
@@ -214,7 +219,7 @@ h1 {
   margin-top: 54px;
   margin-bottom: 40px;
 }
-.title_ja {
+.about_ja {
   font-size: clamp(
     calc(18 * var(--rem)),
     0.983rem + 0.61vw,
@@ -229,39 +234,108 @@ h1 {
   display: block;
 }
 
-.mokku {
+.name {
+  font-size: calc(20 * var(--rem));
   margin-bottom: 40px;
-  width: 100%;
 }
-.small {
+.name_en.lang_en {
   font-size: calc(12 * var(--rem));
-  line-height: 1;
-  margin-bottom: 10px;
+  font-weight: 300;
+  margin-left: 10px;
 }
-h2 {
-  font-size: clamp(
-    calc(18 * var(--rem)),
-    0.983rem + 0.61vw,
-    calc(24 * var(--rem))
-  );
-  line-height: 1;
-  margin-bottom: 40px;
+
+.about_img img {
+  max-width: 200px;
 }
-.intoro {
-  margin-bottom: 50px;
+
+.intro {
+  margin: 0 auto;
 }
-#intoro img {
-  width: 100%;
-  margin-bottom: 30px;
+.introduce {
+  text-align: left;
 }
-.tool {
-  margin-bottom: 130px;
+
+/* 経歴 */
+/* ========================= */
+.career {
+  position: relative;
 }
-.tool_item {
+
+.career_item {
   display: flex;
+  margin-bottom: 80px;
+  gap: 10px;
+  align-items: center;
 }
-dt {
-  font-weight: normal;
+.career_item:last-of-type {
+  margin-bottom: 0;
+}
+.career_item span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #401f0f;
+}
+.career_item dt {
+  width: 72px;
+}
+dd {
+  margin: 0;
+}
+.line {
+  height: calc(
+    100% - 30px
+  ); /* 100%より、1番上と1番下の丸の半径10pxぶんずつ短い線を引く */
+  width: 1px;
+  background: #401f0f;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 92px; /* 丸の半径10pxだけ右に寄せる→丸の中央に線を引く */
+  margin: auto 0; /* 上下中央に配置 */
+}
+
+@media screen and (max-width: 1000px) {
+  .career_item span {
+    order: -1;
+  }
+  .line {
+    left: 10px;
+  }
+}
+
+/* Skill */
+/* ========================= */
+h2 {
+  font-size: calc(36 * var(--rem));
+  margin-bottom: 40px;
+  text-align: center;
+}
+.skill_grid {
+  place-items: center;
+}
+.skill_title {
+  text-align: center;
+}
+/* .skill_title.design {
+  margin-top: -5px;
+} */
+.coding_img {
+  margin-bottom: 16px;
+}
+.skill_item,
+.skill_line {
+  width: 250px;
+}
+.icon {
+  text-align: center;
+}
+.design_icon {
+  width: 120.5px;
+}
+.coding_icon {
+  width: 70.5px;
 }
 
 /* ============================
@@ -278,17 +352,27 @@ footer small {
 
 /* Contact */
 /* ========================= */
+
 .contact {
   display: none;
 }
-
 /* ============================
-* PC
+* コンテナ
 * ========================= */
+@container grid (min-width:600px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 60px;
+  }
+  .skill_grid {
+    align-items: flex-start;
+  }
+}
+
 @media screen and (min-width: 1000px) {
   /* ============================
-  * ヘッダー
-  * ========================= */
+* ヘッダー
+* ========================= */
 
   /* ロゴ */
   /* ========================= */
@@ -296,8 +380,9 @@ footer small {
     display: block;
     position: fixed;
     width: 150px;
-    top: 11dvh;
+    top: 155px;
   }
+
   .pc_nav {
     display: block;
     font-size: calc(14 * var(--rem));
@@ -305,9 +390,6 @@ footer small {
     text-align: center;
     top: 59dvh;
     left: 8.4%;
-  }
-  .pc_nav li {
-    margin-bottom: 25px;
   }
   /* ハンバーガーメニュー */
   /* ========================= */
@@ -323,6 +405,30 @@ footer small {
   .wrap {
     max-width: 660px;
     margin: 0 10% 0 31.5%;
+  }
+  section {
+    margin-bottom: 200px;
+  }
+  h1 {
+    margin-top: 110px;
+  }
+
+  .career {
+    margin-bottom: 200px;
+  }
+  .career_item {
+    display: flex;
+    margin-bottom: 80px;
+  }
+
+  .br_sp {
+    display: none;
+  }
+
+  /* sp_contact */
+  /* ========================= */
+  #contact {
+    display: none;
   }
 
   /* ============================
@@ -340,3 +446,12 @@ footer small {
     right: 4%;
   }
 }
+/* ============================
+* 横スクロールcheck
+* ========================= */
+/* *,
+*::before,
+*::after {
+  outline: 3px solid red;
+  opacity: 1 !important;
+} */

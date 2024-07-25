@@ -220,12 +220,7 @@ h1 {
     0.983rem + 0.61vw,
     calc(24 * var(--rem))
   );
-  font-family: "BIZ UDPMincho", "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
-    "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
-    sans-serif;
-  font-feature-settings: "plat";
-  scroll-behavior: smooth;
-  line-height: 1;
+  line-height: 1.75;
   display: block;
 }
 
@@ -296,7 +291,7 @@ footer small {
     display: block;
     position: fixed;
     width: 150px;
-    top: 11dvh;
+    top: 155px;
   }
   .pc_nav {
     display: block;
@@ -305,9 +300,6 @@ footer small {
     text-align: center;
     top: 59dvh;
     left: 8.4%;
-  }
-  .pc_nav li {
-    margin-bottom: 25px;
   }
   /* ハンバーガーメニュー */
   /* ========================= */

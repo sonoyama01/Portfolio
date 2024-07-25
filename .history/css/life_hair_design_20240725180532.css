@@ -296,7 +296,7 @@ footer small {
     display: block;
     position: fixed;
     width: 150px;
-    top: 11dvh;
+    top: 155px;
   }
   .pc_nav {
     display: block;
@@ -305,9 +305,6 @@ footer small {
     text-align: center;
     top: 59dvh;
     left: 8.4%;
-  }
-  .pc_nav li {
-    margin-bottom: 25px;
   }
   /* ハンバーガーメニュー */
   /* ========================= */

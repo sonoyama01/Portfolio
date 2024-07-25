@@ -26,7 +26,7 @@ body {
     0.828rem + 0.2vw,
     calc(16 * var(--rem))
   );
-  line-height: 1.875;
+  line-height: 1.75;
   color: #240d00;
   font-family: "BIZ UDPMincho", "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
     "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
@@ -202,7 +202,6 @@ img {
 /* ============================
 * MAIN
 * ========================= */
-
 h1 {
   font-size: clamp(
     calc(72 * var(--rem)),
@@ -229,41 +228,24 @@ h1 {
   display: block;
 }
 
-.mokku {
-  margin-bottom: 40px;
-  width: 100%;
-}
-.small {
-  font-size: calc(12 * var(--rem));
-  line-height: 1;
-  margin-bottom: 10px;
-}
 h2 {
   font-size: clamp(
-    calc(18 * var(--rem)),
-    0.983rem + 0.61vw,
-    calc(24 * var(--rem))
+    calc(24 * var(--rem)),
+    0.932rem + 2.42vw,
+    calc(48 * var(--rem))
   );
-  line-height: 1;
+  font-family: "harfang-pro", "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+  font-weight: 300;
+  font-style: italic;
   margin-bottom: 40px;
-}
-.intoro {
-  margin-bottom: 50px;
-}
-#intoro img {
-  width: 100%;
-  margin-bottom: 30px;
-}
-.tool {
-  margin-bottom: 130px;
-}
-.tool_item {
-  display: flex;
-}
-dt {
-  font-weight: normal;
+  text-align: center;
 }
 
+.text_end {
+  margin-bottom: 150px;
+}
 /* ============================
 * footer
 * ========================= */
@@ -276,19 +258,13 @@ footer small {
   padding: 22.5px 0;
 }
 
-/* Contact */
-/* ========================= */
-.contact {
-  display: none;
-}
-
 /* ============================
 * PC
 * ========================= */
 @media screen and (min-width: 1000px) {
   /* ============================
-  * ヘッダー
-  * ========================= */
+      * ヘッダー
+      * ========================= */
 
   /* ロゴ */
   /* ========================= */
@@ -316,27 +292,37 @@ footer small {
   }
 
   /* ============================
-  * MAIN
-  * ========================= */
+      * MAIN
+      * ========================= */
   /* コンテンツ幅 */
   /* ========================= */
   .wrap {
     max-width: 660px;
     margin: 0 10% 0 31.5%;
   }
+  h1 {
+    margin-top: 14.3dvh;
+    margin-bottom: 28.5dvh;
+  }
+
+  h2 {
+    text-align: left;
+    margin-bottom: 17dvh;
+  }
+  .text_first {
+    margin-bottom: 40px;
+  }
+  .text_end {
+    margin-bottom: 200px;
+  }
 
   /* ============================
-* フッター
+* 横スクロールcheck
 * ========================= */
-  .contact img {
-    width: 100%;
-  }
-  .contact {
-    width: 7.3%;
-    display: block;
-    position: fixed;
-    text-align: center;
-    bottom: 53px;
-    right: 4%;
-  }
+  /* *,
+*::before,
+*::after {
+outline: 3px solid red;
+opacity: 1 !important;
+} */
 }
