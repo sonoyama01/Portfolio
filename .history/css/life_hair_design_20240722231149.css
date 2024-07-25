@@ -260,24 +260,6 @@ dt {
 }
 
 /* ============================
-* footer
-* ========================= */
-footer {
-  font-size: calc(10 * var(--rem));
-  text-align: center;
-}
-footer small {
-  display: block;
-  padding: 22.5px 0;
-}
-
-/* Contact */
-/* ========================= */
-.contact {
-  display: none;
-}
-
-/* ============================
 * PC
 * ========================= */
 @media screen and (min-width: 1000px) {

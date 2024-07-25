@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life hair design</title>
+    <title>お問い合わせ</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
-    <link rel="stylesheet" href="./css/life_hair_design.css">
+    <link rel="stylesheet" href="./css/contact.css">
     <script>
         (function (d) {
             var config = {
@@ -98,47 +98,61 @@
         </div>
     </header>
 
-
     <div class="wrap">
-        <h1 class="lang_script">Works
-            <span class="title_ja">制作実績</span>
+        <h1 class="lang_script">Contact
+            <span class="title_ja">お問い合わせ</span>
         </h1>
 
-        <!-- コンテンンツ -->
-        <div class="mokku">
-            <img src="./images/mokku_LIFE_hair_design@2x.png" alt="LIFE hair designのモックアップ">
-        </div>
-        <section id="intoro">
-            <p class="small">Webデザイン</p>
-            <h2>美容室 LIFE hair design</h2>
-            <p class="intoro">課題として架空の美容室のLPを作成しました。ターゲットが20代～50代の女性ということで余白を大切にし、柔らかい色合いで女性らしさを表現しました。</p>
-            <img src="./images/line_tool@2x.png" alt="">
-            <div class="tool">
-                <dl>
-                    <div class="tool_item">
-                        <dt>制作範囲</dt>
-                        <dd>デザイン</dd>
-                    </div>
-                    <div class="tool_item">
-                        <dt>使用ツール</dt>
-                        <dd>Illustlator・Photoshop</dd>
-                    </div>
-                </dl>
+        <form class="c_form" target="hidden_iframe" onsubmit="submitted=true;"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeVxfCTPGxoa-qkSRM5cAujmin6P6odDdhzz0oWd1QogeSrsg/formResponse"
+            method="post">
+            <!-- お問い合わせフォーム -->
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-name">お名前<span class="c-form__required">必須</span></label>
+                <input name="entry.943291740" class="c-form__input" id="field-name" type="text" required="required" />
             </div>
-            <img src="./images/life_hair_design_pc.jpg" alt="美容室 LIFE hair designのLP">
-        </section>
-    </div>
 
-    <!-- フッター -->
-    <footer><small>&copy;2024 Sae Sonoyama</small></footer>
-    <!-- コンタクト -->
-    <div class="contact">
-        <a href="contact.html"><img src="./images/contact@2x.png" alt="contact"></a>
-    </div>
-    <!-- スクリプト -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="./script.js"></script>
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-name-furigana">お名前(フリガナ)<span
+                        class="c-form__required">必須</span></label>
+                <input name="entry.761953267" class="c-form__input" id="field-name-furigana" type="text"
+                    required="required" />
+            </div>
 
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-mail">メールアドレス<span class="c-form__required">必須</span></label>
+                <input name="entry.125210299" class="c-form__input" id="field-mail" type="email" required="required" />
+            </div>
+
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-company-name">会社名</label>
+                <input name="entry.785725022" class="c-form__input" id="field-company-name" type="text" />
+            </div>
+
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-department">部署名</label>
+                <input name="entry.1599096168" class="c-form__input" id="field-department" type="text" />
+            </div>
+
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-subject">件名<span class="c-form__required">必須</span></label>
+                <input name="entry.1937717520" class="c-form__input" id="field-subject" type="text"
+                    required="required" />
+            </div>
+
+            <div class="c-form__item">
+                <label class="c-form__label" for="field-message">本文<span class="c-form__required">必須</span></label>
+                <textarea name="entry.1555314678" class="c-form__input" id="field-message"
+                    required="required"></textarea>
+            </div>
+            <!-- 送信ボタン -->
+            <div class="c-form__submit">
+                <button type="submit">送信</button>
+            </div>
+
+        </form>
+
+    </div>
 
 </body>
 
