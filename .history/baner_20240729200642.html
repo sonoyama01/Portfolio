@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>バナー</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
-    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/works_list.css">
     <script>
         (function (d) {
             var config = {
@@ -20,7 +20,6 @@
 </head>
 
 <body>
-    <!-- ヘッダー -->
     <header>
         <div class="header_wrap">
             <div class="logo">
@@ -73,7 +72,7 @@
                     <ul class="nav">
                         <li><a href="index.html">Top</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li class="nav_item"><a href="index.html#works">Works</a>
+                        <li class="nav_item">Works
                             <div class="small_nav">
                                 <ul>
                                     <li class="small_nav_item"><a href="web_design.html">Webデザイン</a></li>
@@ -91,7 +90,7 @@
                 <ul class="nav">
                     <li><a href="index.html">Top</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="index.html#works">Works</a></li>
+                    <li><a href="#works">Works</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="instagram">Instagram</a></li>
                 </ul>
@@ -99,103 +98,44 @@
         </div>
     </header>
 
-
-
-    <h1 class="lang_script">About
-        <span class="title_ja">私について</span>
-    </h1>
-    <section id="about">
-        <div class="wrap">
-            <h2>about</h2>
-            <div class="grid about_grid">
-                <div class="about_img grid_item"> <img src="./images/my_photo_sepia@3x.png" alt="私の写真"
-                        class="about_img"></div>
-                <div class="intro grid_item">
-                    <p class="name">
-                        園山 彩絵
-                        <span class="name_en lang_en">Sonoyama Sae</span>
-                    </p>
-                    <p class="introduce">
-                        1996年生まれの28歳です。<br>
-                        岡山県出身で、1児の母として初めての子育てに奮闘中です。<br>
-                        臨床検査技師の国家資格を所有しています。
-                    </p>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="career">
-        <div class="wrap career">
-            <h2>career</h2>
-            <div class="line"></div>
-            <dl>
-                <div class="career_item">
-                    <dt><time datetime="2019-03">2019.03</time></dt>
-                    <span></span>
-                    <dd>岡山理科大学卒業</dd>
-                </div>
-                <div class="career_item">
-                    <dt><time datetime="2019-04">2019.04</time></dt>
-                    <span></span>
-                    <dd>臨床検査技師免許を取得し、
-                        <br class="br_sp">病院で働き始める
-                    </dd>
-                </div>
-                <div class="career_item">
-                    <dt><time datetime="2023-03">2023.03</time></dt>
-                    <span></span>
-                    <dd>第1子を出産</dd>
-                </div>
-                <div class="career_item">
-                    <dt><time datetime="2024-03">2024.04</time></dt>
-                    <span></span>
-                    <dd>育休延長を機に、<br class="br_sp">Webデザインを学び始める</dd>
-                </div>
-            </dl>
-        </div>
-    </section>
-
-    <section id="skill">
-        <div class="wrap">
-            <h2 class="lang_en">Skill</h2>
-            <div class="skill_grid grid">
-                <div class="skill_item">
-                    <div class="icon design_img"><img class="design_icon" src="./images/design_icon@3x.png" alt="">
-                    </div>
-                    <p class="skill_title design">デザイン</p>
-                    <p>ユーザビリティの高いデザインとなるよう心がけています。</p>
-                    <img class="skill_line" src="./images/skill_line@3x.png" alt="">
-                    <p>使用ツール<br>
-                        Illustrator / Photoshop</p>
-                </div>
-                <div class="skill_item">
-                    <div class="icon coding_img"><img class="coding_icon" src="./images/coding_icon@3x.png" alt="">
-                    </div>
-                    <p class="skill_title coding">コーディング</p>
-                    <p>HTML/CSS/jQueryを使用してのページが可能です。</p>
-                    <img class="skill_line" src="./images/skill_line@3x.png" alt="">
-                    <p>使用言語・ツール<br>
-                        HTML / CSS / jQuery / Github / VSCode</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <!-- フッター -->
-    <footer><small>&copy;2024 Sae Sonoyama</small></footer>
-    <!-- コンタクト -->
-    <div class="contact">
-        <a href="contact.html"><img src="./images/contact@2x.png" alt="contact"></a>
+    <div class="wrap">
+        <h1 class="lang_script">Works
+            <span class="title_ja">制作実績</span>
+        </h1>
+        <ul class="flex">
+            <li class="flex_item">
+                <a href="web_design.html">Webデザイン</a>
+            </li>
+            <li class="flex_item hide_sp">バナー</li>
+            <li class="flex_item hide_sp"><a href="others.html">その他</a></li>
+        </ul>
     </div>
-    <!-- スクリプト -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="./script.js"></script>
 
-
+    <section id="works">
+        <h2>works</h2>
+        <div class="grid">
+            <div class="grid_item">
+                <a href="life_hair_design.html"><img src="./images/dezasuta_mobile@2x-80.jpg" alt="デザスタmobileのモックアップ">
+                    <p>デザスタmobile</p>
+                </a>
+            </div>
+            <div class="grid_item">
+                <a href="workers.html"><img src="./images/mokku_workers@2x.png" alt="WORKERSのモックアップ">
+                    <p>WORKERS</p>
+                </a>
+            </div>
+            <div class="grid_item">
+                <a href="index.html"><img src="./images/mokku_the_story@2x.png" alt="The Storyのモックアップ">
+                    <p>The Story</p>
+                </a>
+            </div>
+            <div class="grid_item">
+                <a href="design_cafe.html"><img src="./images/mokku_design_cafe@2x.png" alt="DESIGN CAFEのモックアップ">
+                    <p>DESIGN CAFE</p>
+                </a>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
