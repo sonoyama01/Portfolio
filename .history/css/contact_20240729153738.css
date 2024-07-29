@@ -54,22 +54,6 @@ body {
   container-type: inline-size;
 }
 
-.grid_item {
-  text-align: center;
-}
-
-.grid {
-  display: grid;
-  align-items: center;
-  gap: 40px;
-}
-img {
-  display: inline-block;
-  width: 100%;
-}
-.hide_sp {
-  display: none;
-}
 /* ============================
 * ヘッダー
 * ========================= */
@@ -82,8 +66,8 @@ img {
 }
 
 /* ============================
-* ハンバーガーメニュー
-* ========================= */
+  * ハンバーガーメニュー
+  * ========================= */
 .sp_nav_outer {
   display: none;
 }
@@ -228,35 +212,66 @@ h1 {
   display: block;
 }
 
-.flex {
-  font-size: calc(24 * var(--rem));
-  display: flex;
-  justify-content: space-between;
-  width: 74%;
-  margin: 0 auto 40px auto;
-}
-
-.flex_item {
-  margin: 0 auto;
-}
-
-/* works */
+/* お問い合わせフォーム */
 /* ========================= */
-section {
-  margin-bottom: 150px;
+.c-form__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
 }
-h2 {
-  display: none;
+.c-form__input {
+  width: 97%;
+  border: solid 1px #333;
+  min-height: 40px;
 }
-.grid {
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-  gap: 60px;
+.c-form__label {
+  font-size: calc(14 * var(--rem));
 }
-.grid_item {
-  row-gap: 120px;
+.c-form__required {
+  font-size: calc(10 * var(--rem));
+  margin-left: 16px;
 }
-img {
-  margin-bottom: 20px;
+.c-form__submit {
+  text-align: center;
+}
+.c-form__item textarea {
+  min-height: 200px;
+}
+
+button {
+  position: relative;
+  padding: 8px 20px;
+  border: 1px solid #401f0f;
+  transition: 0.3s ease-in-out;
+}
+button::before {
+  content: "";
+  position: absolute;
+  background-image: url(/images/send_square@2x.png);
+  background-size: cover;
+  width: 4.6em;
+  height: 1.875em;
+}
+button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 4px;
+  left: 4px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(64, 31, 15, 0.37);
+}
+button:hover {
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+.c-form__submit button::after {
+  transition: 0.3s ease-in-out;
+}
+.c-form__submit button:hover::after {
+  top: 0;
+  left: 0;
 }
 
 /* ============================
@@ -271,25 +286,13 @@ footer small {
   padding: 22.5px 0;
 }
 
-/* Contact */
-/* ========================= */
-.contact {
-  display: none;
-}
-
-/* ============================
-* コンテナ
-* ========================= */
-@container grid (min-width:600px) {
-}
-
 /* ============================
 * PC
 * ========================= */
 @media screen and (min-width: 1000px) {
   /* ============================
-  * ヘッダー
-  * ========================= */
+    * ヘッダー
+    * ========================= */
 
   /* ロゴ */
   /* ========================= */
@@ -317,8 +320,8 @@ footer small {
   }
 
   /* ============================
-  * MAIN
-  * ========================= */
+    * MAIN
+    * ========================= */
   /* コンテンツ幅 */
   /* ========================= */
   .wrap {
@@ -328,37 +331,23 @@ footer small {
   h1 {
     margin-top: 110px;
   }
-  .flex {
-    margin: 0 auto 130px auto;
+  .c-form {
+    max-width: 640px;
   }
-  .hide_sp {
-    display: block;
-  }
-  section {
-    margin-bottom: 200px;
+  .c-form__item {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
   }
 
   /* ============================
-* フッター
-* ========================= */
-  .contact img {
-    width: 100%;
-  }
-  .contact {
-    width: 7.3%;
-    display: block;
-    position: fixed;
-    text-align: center;
-    bottom: 53px;
-    right: 4%;
-  }
-}
-/* ============================
 * 横スクロールcheck
 * ========================= */
-/* *,
+  /* *,
 *::before,
 *::after {
-  outline: 3px solid red;
-  opacity: 1 !important;
+outline: 3px solid red;
+opacity: 1 !important;
 } */
+}
