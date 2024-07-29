@@ -231,9 +231,6 @@ h1 {
   font-size: calc(10 * var(--rem));
   margin-left: 16px;
 }
-.c-form__item textarea {
-  min-height: 200px;
-}
 .c-form__submit {
   text-align: center;
   font-size: clamp(
@@ -241,7 +238,9 @@ h1 {
     0.811rem + 0.81vw,
     calc(24 * var(--rem))
   );
-  margin-bottom: 10px;
+}
+.c-form__item textarea {
+  min-height: 200px;
 }
 
 button {
@@ -346,9 +345,10 @@ footer small {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    margin-bottom: 40px;
   }
   .c-form__item textarea {
-    margin-bottom: 70px;
+    margin-bottom: 100px;
   }
   .c-form__submit {
     margin-bottom: 200px;
