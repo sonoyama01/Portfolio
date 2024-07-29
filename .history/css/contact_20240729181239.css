@@ -248,10 +248,9 @@ h1 {
 button {
   position: relative;
   padding: 0.44em 1.23em;
-  /* border: 1px solid #401f0f; */
+  border: 1px solid #401f0f;
   transition: 0.3s ease-in-out;
   line-height: 1;
-  background-image: url(/images/send_square@2x.png);
 }
 /* button::before {
   content: "";
@@ -261,8 +260,8 @@ button {
   width: 4.6em;
   height: 1.875em;
   top: 0;
-  left: 0;
-} */
+  left: 0; */
+}
 button::after {
   content: "";
   position: absolute;

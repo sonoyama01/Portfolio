@@ -233,14 +233,13 @@ h1 {
 }
 .c-form__item textarea {
   min-height: 200px;
-  margin-bottom: 10px;
 }
 .c-form__submit {
   text-align: center;
   font-size: clamp(
     calc(16 * var(--rem)),
-    0.905rem + 0.4vw,
-    calc(20 * var(--rem))
+    0.811rem + 0.81vw,
+    calc(24 * var(--rem))
   );
   margin-bottom: 150px;
 }
@@ -248,12 +247,10 @@ h1 {
 button {
   position: relative;
   padding: 0.44em 1.23em;
-  /* border: 1px solid #401f0f; */
+  border: 1px solid #401f0f;
   transition: 0.3s ease-in-out;
-  line-height: 1;
-  background-image: url(/images/send_square@2x.png);
 }
-/* button::before {
+button::before {
   content: "";
   position: absolute;
   background-image: url(/images/send_square@2x.png);
@@ -262,7 +259,7 @@ button {
   height: 1.875em;
   top: 0;
   left: 0;
-} */
+}
 button::after {
   content: "";
   position: absolute;
@@ -356,9 +353,6 @@ footer small {
   .c-form__submit {
     margin-bottom: 200px;
   }
-  /* button {
-    padding: 8px 21.3px;
-  } */
 
   /* ============================
 * 横スクロールcheck

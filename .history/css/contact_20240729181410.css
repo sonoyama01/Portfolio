@@ -252,6 +252,7 @@ button {
   transition: 0.3s ease-in-out;
   line-height: 1;
   background-image: url(/images/send_square@2x.png);
+  width: 100%;
 }
 /* button::before {
   content: "";
