@@ -1,0 +1,530 @@
+@charset "utf-8";
+
+:root {
+  --min-viewport-width: 375;
+  --max-viewport-width: 1366;
+
+  --min-fluid-ratio: calc(1 / var(--min-viewport-width) * 100dvi);
+  --max-fluid-ratio: calc(1 / var(--max-viewport-width) * 100dvi);
+
+  --rem: 1rem/16;
+}
+
+body {
+  /* ============================
+  * 背景
+  * ========================= */
+  background-image: url("../images/bg_top@2x-80.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  /* ============================
+  * フォント
+  * ========================= */
+  font-size: clamp(
+    calc(14 * var(--rem)),
+    0.828rem + 0.2vw,
+    calc(16 * var(--rem))
+  );
+  line-height: 1.75;
+  color: #240d00;
+  font-family: "BIZ UDPMincho", "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
+    "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
+    sans-serif;
+  font-feature-settings: "plat";
+  scroll-behavior: smooth;
+}
+.lang_en {
+  font-family: "harfang-pro", "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+    "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+    "ＭＳ 明朝", serif;
+  font-weight: 400;
+}
+.lang_script {
+  font-family: "p22-marcel-script-pro", "Hiragino Sans W3",
+    "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo,
+    "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 400;
+}
+
+.more {
+  font-size: clamp(
+    calc(14 * var(--rem)),
+    0.638rem + 1.01vw,
+    calc(24 * var(--rem))
+  );
+}
+
+.wrap {
+  max-width: 80%;
+  margin: 0 auto;
+  container-name: grid;
+  container-type: inline-size;
+}
+
+.grid_item {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+/* ============================
+* ヘッダー
+* ========================= */
+h1 {
+  width: 162px;
+  margin: 50.5px auto 13.5px 10%;
+}
+.pc_nav {
+  display: none;
+}
+
+/* ============================
+* ハンバーガーメニュー
+* ========================= */
+.sp_nav_outer {
+  display: none;
+}
+
+/* 三本線 */
+/* ========================= */
+.ham_btn {
+  display: block;
+  height: 23px;
+  cursor: pointer;
+  z-index: 2;
+  position: fixed;
+  z-index: 999;
+  top: 20px;
+  right: 20px;
+}
+.ham_btn span {
+  display: block;
+  width: 27px;
+  height: 3px;
+  border-radius: 2px;
+  background: #401f0f;
+  /* 位置の調整*/
+  position: relative;
+
+  /* アニメーション */
+  /* ========================= */
+  transition: 0.3s;
+}
+.ham_btn span::before,
+.ham_btn span::after {
+  content: "";
+  display: block;
+  width: 27px;
+  height: 3px;
+  border-radius: 2px;
+  background: #401f0f;
+  /* 位置の調整*/
+  position: absolute;
+  /* アニメーション */
+  transition: 0.3s;
+}
+.ham_btn span::before {
+  bottom: 10px;
+}
+.ham_btn span::after {
+  top: 10px;
+}
+
+/* ×印 */
+/* ========================= */
+.ham_btn.open span {
+  background: transparent;
+}
+.ham_btn.open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+.ham_btn.open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* メニューの見た目*/
+/* ========================= */
+.sp_nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(216, 194, 141, 0.8);
+  z-index: 1;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sp_nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 60px;
+}
+.sp_nav .nav {
+  font-size: calc(24 * var(--rem));
+}
+
+.sp_nav .small_nav {
+  font-size: calc(14 * var(--rem));
+  font-family: "BIZ UDPMincho", "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
+    "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
+    sans-serif;
+  font-feature-settings: "plat";
+  align-items: flex-start;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding-left: 85px;
+  gap: 24px;
+  margin-top: 23px;
+}
+.small_nav_item {
+  line-height: 1;
+  display: inline-block;
+  text-align: left;
+}
+
+.small_nav_item::before {
+  content: "-";
+}
+
+/* ============================
+* メインビジュアル
+* ========================= */
+.mv source {
+  width: 71.5%;
+}
+.mv img {
+  width: 80%;
+}
+.catch_copy {
+  font-size: calc(24 * var(--rem));
+  text-align: center;
+}
+.sub_catch_copy {
+  font-size: calc(14 * var(--rem));
+}
+
+.mv-about source {
+  width: 26.5%;
+}
+.mv-about img {
+  width: 74.5%;
+}
+.mv-about,
+.mv {
+  text-align: center;
+}
+
+/* ============================
+* Top_About
+* ========================= */
+h2 {
+  font-size: calc(36 * var(--rem));
+  text-align: center;
+}
+#about h2 {
+  margin-bottom: 40px;
+}
+.name {
+  font-size: calc(20 * var(--rem));
+}
+.name_en.lang_en {
+  font-size: calc(12 * var(--rem));
+  font-weight: 300;
+  margin-left: 10px;
+}
+
+.about_grid {
+  row-gap: 20px;
+}
+.intro {
+  margin: 0 auto 25px auto;
+}
+.introduce {
+  text-align: left;
+}
+
+#about .wrap {
+  position: relative;
+  margin-bottom: 150px;
+}
+.more.about {
+  position: absolute;
+  bottom: -7.5%;
+  left: 95%;
+}
+
+/* ============================
+* Top_Works
+* ========================= */
+h3 {
+  font-size: calc(24 * var(--rem));
+  position: relative;
+  line-height: 1;
+}
+h3::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 1em;
+  background-color: #401f0f;
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+
+.anchor {
+  margin-bottom: 40px;
+}
+
+.anchor_link {
+  grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
+}
+
+.works_grid {
+  row-gap: 40px;
+  margin: 0 auto 15px auto;
+}
+.life_hair_design {
+  width: 300px;
+  height: 300px;
+  background-image: url(../images/mokku_life_hair_design_sepia@2x.png);
+  background-size: 100% 100%;
+}
+.life_hair_design a {
+  display: block;
+  height: 300px;
+}
+
+#others .lang_script {
+  font-size: calc(48 * var(--rem));
+}
+
+#web_design {
+  position: relative;
+}
+.more.web_design {
+  position: absolute;
+  bottom: -7.5%;
+  left: 95%;
+}
+#banner {
+  position: relative;
+}
+.more.banner {
+  position: absolute;
+  bottom: -7.5%;
+  left: 95%;
+}
+#others {
+  position: relative;
+}
+.more.others {
+  position: absolute;
+  /* bottom: -7.5%; */
+  left: 95%;
+}
+#works {
+  margin-bottom: 150px;
+}
+
+/* Contact */
+/* ========================= */
+#contact p {
+  text-align: center;
+  margin: 40px auto;
+}
+.contact_sp {
+  display: flex;
+  column-gap: 35px;
+  justify-content: center;
+}
+.contact_item img {
+  width: 100%;
+}
+.contact_item {
+  width: 100px;
+}
+#contact {
+  margin-bottom: 150px;
+}
+/* ============================
+* footer
+* ========================= */
+footer {
+  font-size: calc(10 * var(--rem));
+  text-align: center;
+}
+footer small {
+  display: block;
+  padding: 22.5px 0;
+}
+
+.contact {
+  display: none;
+}
+
+/* ============================
+* コンテナ
+* ========================= */
+@container grid (min-width:600px) {
+  h2 {
+    text-align: left;
+  }
+  .about_grid,
+  .works_grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  }
+  .more.web_design,
+  .more.banner,
+  .more.others,
+  .more.about {
+    position: absolute;
+    bottom: -5%;
+    left: 100%;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+  }
+
+  #works h2 {
+    line-height: 1;
+  }
+
+  .anchor {
+    margin-bottom: 0;
+  }
+
+  .anchor_link {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  /* ============================
+* ヘッダー
+* ========================= */
+
+  /* ロゴ */
+  /* ========================= */
+  h1 {
+    position: fixed;
+    width: 150px;
+    top: 11dvh;
+  }
+
+  .pc_nav {
+    display: block;
+    font-size: calc(14 * var(--rem));
+    position: fixed;
+    text-align: center;
+    top: 59dvh;
+    left: 8.4%;
+  }
+  .pc_nav li {
+    margin-bottom: 25px;
+  }
+  /* ハンバーガーメニュー */
+  /* ========================= */
+  .ham_btn {
+    display: none;
+  }
+
+  /* ============================
+  * MAIN
+  * ========================= */
+  /* コンテンツ幅 */
+  /* ========================= */
+  .wrap {
+    max-width: 660px;
+    margin: 0 10% 0 30%;
+  }
+
+  /* メインビジュアル */
+  /* ========================= */
+  .mv {
+    margin-top: 100px;
+  }
+
+  h3 {
+    margin-bottom: 24px;
+  }
+  #web_design,
+  #banner {
+    margin-bottom: 130px;
+  }
+
+  /* sp_contact */
+  /* ========================= */
+  #contact {
+    display: none;
+  }
+
+  /* ============================
+* フッター
+* ========================= */
+  .contact img {
+    width: 100%;
+    transform-origin: center bottom;
+    animation: contact 4s linear infinite;
+  }
+
+  @keyframes contact {
+    0%,
+    100% {
+      transform: rotate(8deg);
+    }
+    50% {
+      transform: rotate(-8deg);
+    }
+  }
+
+  .contact {
+    width: 7.3%;
+    display: block;
+    position: fixed;
+    text-align: center;
+    bottom: 53px;
+    right: 4%;
+  }
+}
+
+/* ============================
+* hover
+* ========================= */
+@media (any-hover: hover) {
+  .life_hair_design:hover {
+    width: 300px;
+    height: 200px;
+    background-image: url(../images/mokku_LIFE_hair_design@2x.png);
+    background-size: 100% 100%;
+  }
+}
+/* ============================
+* 横スクロールcheck
+* ========================= */
+/* *,
+*::before,
+*::after {
+  outline: 3px solid red;
+  opacity: 1 !important;
+} */
