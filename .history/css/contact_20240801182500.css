@@ -21,12 +21,13 @@ body {
   /* ============================
   * フォント
   * ========================= */
+
   font-size: clamp(
     calc(14 * var(--rem)),
     0.828rem + 0.2vw,
     calc(16 * var(--rem))
   );
-  line-height: 1.875;
+  line-height: 1.75;
   color: #240d00;
   font-family: "BIZ UDPMincho", "Hiragino Sans W3", "Hiragino Kaku Gothic ProN",
     "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic",
@@ -54,22 +55,6 @@ body {
   container-type: inline-size;
 }
 
-.grid_item {
-  text-align: center;
-}
-
-.grid {
-  display: grid;
-  align-items: center;
-  gap: 40px;
-}
-img {
-  display: inline-block;
-  width: 100%;
-}
-.hide_sp {
-  display: none;
-}
 /* ============================
 * ヘッダー
 * ========================= */
@@ -214,7 +199,6 @@ header {
 /* ============================
 * MAIN
 * ========================= */
-
 h1 {
   font-size: clamp(
     calc(72 * var(--rem)),
@@ -241,71 +225,73 @@ h1 {
   display: block;
 }
 
-.mokku {
+/* お問い合わせフォーム */
+/* ========================= */
+.c-form__item {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 40px;
-  width: 100%;
 }
-.small {
-  font-size: calc(12 * var(--rem));
-  line-height: 1;
+.c-form__input {
+  width: 97%;
+  border: solid 1px #333;
+  min-height: 40px;
+}
+.c-form__label {
+  font-size: calc(14 * var(--rem));
+}
+.c-form__required {
+  font-size: calc(10 * var(--rem));
+  margin-left: 16px;
+}
+.c-form__item textarea {
+  min-height: 200px;
   margin-bottom: 10px;
 }
-h2 {
-  font-size: clamp(
-    calc(18 * var(--rem)),
-    0.983rem + 0.61vw,
-    calc(24 * var(--rem))
-  );
-  line-height: 1;
-  margin-bottom: 40px;
-}
-
-#intoro {
-  margin-bottom: 100px;
-}
-
-.intoro {
-  margin-bottom: 50px;
-}
-#intoro img {
-  width: 100%;
-}
-
-#intoro img:not(:last-of-type) {
-  margin-bottom: 30px;
-}
-.tool {
-  margin-bottom: 130px;
-}
-.tool_item {
-  display: flex;
-}
-dt {
-  font-weight: normal;
-}
-
-/* ============================
-* works一覧リンク
-* ========================= */
-.worksList {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.c-form__submit {
   text-align: center;
   font-size: clamp(
-    calc(14 * var(--rem)),
-    0.686rem + 0.81vw,
-    calc(22 * var(--rem))
+    calc(16 * var(--rem)),
+    0.905rem + 0.4vw,
+    calc(20 * var(--rem))
   );
-  margin-bottom: 30px;
+  margin-bottom: 150px;
 }
 
-.worksList a:first-child {
-  font-size: clamp(
-    calc(13 * var(--rem)),
-    0.6rem + 0.91vw,
-    calc(22 * var(--rem))
-  );
+button {
+  position: relative;
+  padding: 0.44em 1.23em;
+  /* border: 1px solid #401f0f; */
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+  background-image: url(../images/send_square@2x.png);
+  background-size: 100% 100%;
 }
+
+button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 4px;
+  left: 4px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(64, 31, 15, 0.37);
+  background-image: url(../images/send_after@2x.png);
+  background-size: 100% 100%;
+}
+button:hover {
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+.c-form__submit button::after {
+  transition: 0.3s ease-in-out;
+}
+.c-form__submit button:hover::after {
+  top: 0;
+  left: 0;
+}
+
 /* ============================
 * footer
 * ========================= */
@@ -318,19 +304,13 @@ footer small {
   padding: 22.5px 0;
 }
 
-/* Contact */
-/* ========================= */
-.contact {
-  display: none;
-}
-
 /* ============================
 * PC
 * ========================= */
 @media screen and (min-width: 1000px) {
   /* ============================
-  * ヘッダー
-  * ========================= */
+    * ヘッダー
+    * ========================= */
 
   /* ロゴ */
   /* ========================= */
@@ -358,103 +338,71 @@ footer small {
   }
 
   /* ============================
-  * MAIN
-  * ========================= */
+    * MAIN
+    * ========================= */
   /* コンテンツ幅 */
   /* ========================= */
   .wrap {
     max-width: 660px;
     margin: 0 10% 0 30%;
   }
+  h1 {
+    margin-top: 110px;
+  }
+  .c-form {
+    max-width: 640px;
+  }
+  .c-form__item {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+  .c-form__item textarea {
+    margin-bottom: 70px;
+  }
+  .c-form__submit {
+    margin-bottom: 200px;
+  }}
+
+  @media (any-hover: hover) {
+    /* グローバルナビ */
+    /* ========================= */
+    .nav a {
+      position: relative;
+      width: fit-content;
+      display: inline-block;
+      padding: 0 1em;
+    }
+  
+    .nav a::after {
+      position: absolute;
+      content: "";
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background-image: url(../images/hover_line_short@2x.png);
+      background-size: 100% 50%;
+      background-repeat: no-repeat;
+      transform: scale(0, 1);
+      transform-origin: center top;
+      transition: transform 0.4s;
+    }
+  
+    .nav a:hover::after {
+      transform: scale(1, 1);
+    }
+  /* button {
+    padding: 8px 21.3px;
+  } */
 
   /* ============================
-* フッター
+* 横スクロールcheck
 * ========================= */
-  .contact img {
-    width: 100%;
-    transform-origin: center bottom;
-    animation: contact 4s linear infinite;
-  }
+  /* *,
+*::before,
+*::after {
+outline: 3px solid red;
+opacity: 1 !important;
+} */
 
-  @keyframes contact {
-    0%,
-    100% {
-      transform: rotate(8deg);
-    }
-    50% {
-      transform: rotate(-8deg);
-    }
-  }
-
-  .contact {
-    width: 7.3%;
-    display: block;
-    position: fixed;
-    text-align: center;
-    bottom: 53px;
-    right: 4%;
-  }
-}
-
-/* ============================
-* hover
-* ========================= */
-.long_line {
-  padding: 0 1em;
-}
-.short_line {
-  padding: 0 1.43em;
-}
-@media (any-hover: hover) {
-  /* グローバルナビ */
-  /* ========================= */
-  .nav a {
-    position: relative;
-    width: fit-content;
-    display: inline-block;
-    padding: 0 1em;
-  }
-
-  .nav a::after {
-    position: absolute;
-    content: "";
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background-image: url(../images/hover_line_short@2x.png);
-    background-size: 100% 50%;
-    background-repeat: no-repeat;
-    transform: scale(0, 1);
-    transform-origin: center top;
-    transition: transform 0.4s;
-  }
-
-  .nav a:hover::after {
-    transform: scale(1, 1);
-  }
-  .worksList a {
-    position: relative;
-    display: inline;
-    width: fit-content;
-  }
-
-  .worksList a::after {
-    position: absolute;
-    content: "";
-    bottom: -25px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(../images/hover_line_long.png);
-    background-size: 100% 50%;
-    background-repeat: no-repeat;
-    transform: scale(0, 1);
-    transform-origin: center top;
-    transition: transform 0.4s;
-  }
-
-  .worksList a:hover::after {
-    transform: scale(1, 1);
-  }
-}
