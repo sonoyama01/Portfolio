@@ -259,23 +259,6 @@ h2 {
 }
 dt {
   font-weight: normal;
-  width: 115px;
-  position: relative;
-}
-dt::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: 100%;
-  width: 1px;
-  height: 0.8em;
-  display: inline-block;
-  background-color: #240d00;
-}
-dd {
-  padding-left: 13px;
 }
 
 .pc_site {

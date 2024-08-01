@@ -73,10 +73,26 @@ img {
 /* ============================
 * ヘッダー
 * ========================= */
-.logo {
-  width: 162px;
-  margin: 50.5px auto 13.5px 10%;
+header {
+  padding-top: 6px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
 }
+
+.header_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2%;
+}
+
+.logo {
+  width: 90px;
+  margin: 0 3%;
+}
+
 .pc_nav {
   display: none;
 }
@@ -90,47 +106,43 @@ img {
 
 /* 三本線 */
 /* ========================= */
-.ham_btn {
-  display: block;
-  height: 23px;
-  cursor: pointer;
-  z-index: 2;
-  position: fixed;
-  z-index: 999;
-  top: 20px;
-  right: 20px;
-}
-.ham_btn span {
-  display: block;
-  width: 27px;
-  height: 3px;
-  border-radius: 2px;
-  background: #401f0f;
-  /* 位置の調整*/
-  position: relative;
 
-  /* アニメーション */
-  /* ========================= */
-  transition: 0.3s;
+.ham_btn {
+  width: 58px;
+  height: 2.5em;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
 }
+
+.ham_btn span {
+  width: 27px;
+  padding-top: 4.2%;
+  background-color: #401f0f;
+  position: relative;
+  /* アニメーション */
+  transition: 0.3s;
+  z-index: 1000;
+}
+
 .ham_btn span::before,
 .ham_btn span::after {
-  content: "";
-  display: block;
-  width: 27px;
-  height: 3px;
-  border-radius: 2px;
-  background: #401f0f;
-  /* 位置の調整*/
   position: absolute;
+  content: "";
+  background-color: #401f0f;
+  width: 100%;
+  padding-top: 9%;
   /* アニメーション */
   transition: 0.3s;
 }
+
 .ham_btn span::before {
-  bottom: 10px;
+  bottom: 9px;
 }
 .ham_btn span::after {
-  top: 10px;
+  top: 9px;
 }
 
 /* ×印 */
@@ -247,10 +259,21 @@ h2 {
   line-height: 1;
   margin-bottom: 40px;
 }
+
+#intoro {
+  margin-bottom: 100px;
+}
+
 .intoro {
   margin-bottom: 50px;
 }
+#intoro img {
+  width: 100%;
+}
 
+#intoro img:not(:last-of-type) {
+  margin-bottom: 30px;
+}
 .tool {
   margin-bottom: 130px;
 }
@@ -265,29 +288,35 @@ dt {
 dt::after {
   content: "";
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
   left: 100%;
+  display: inline-block;
   width: 1px;
   height: 0.8em;
-  display: inline-block;
   background-color: #240d00;
 }
-dd {
-  padding-left: 13px;
+
+/* ============================
+* works一覧リンク
+* ========================= */
+.worksList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  font-size: clamp(
+    calc(14 * var(--rem)),
+    0.686rem + 0.81vw,
+    calc(22 * var(--rem))
+  );
+  margin-bottom: 30px;
 }
 
-.pc_site {
-  display: none;
+.worksList a:first-child {
+  font-size: clamp(
+    calc(13 * var(--rem)),
+    0.6rem + 0.91vw,
+    calc(22 * var(--rem))
+  );
 }
-.sp_site {
-  width: 300px;
-}
-.sites {
-  margin-bottom: 100px;
-}
-
 /* ============================
 * footer
 * ========================= */
@@ -349,21 +378,25 @@ footer small {
     margin: 0 10% 0 30%;
   }
 
-  .pc_site {
-    display: block;
-    margin-bottom: 200px;
-  }
-  .sp_site {
-    width: 300px;
-    margin: 0 auto;
-  }
-
   /* ============================
 * フッター
 * ========================= */
   .contact img {
     width: 100%;
+    transform-origin: center bottom;
+    animation: contact 4s linear infinite;
   }
+
+  @keyframes contact {
+    0%,
+    100% {
+      transform: rotate(8deg);
+    }
+    50% {
+      transform: rotate(-8deg);
+    }
+  }
+
   .contact {
     width: 7.3%;
     display: block;
@@ -373,9 +406,16 @@ footer small {
     right: 4%;
   }
 }
+
 /* ============================
-  * ホバー
-  * ========================= */
+* hover
+* ========================= */
+.long_line {
+  padding: 0 1em;
+}
+.short_line {
+  padding: 0 1.43em;
+}
 @media (any-hover: hover) {
   /* グローバルナビ */
   /* ========================= */
@@ -402,6 +442,30 @@ footer small {
   }
 
   .nav a:hover::after {
+    transform: scale(1, 1);
+  }
+  .worksList a {
+    position: relative;
+    display: inline;
+    width: fit-content;
+  }
+
+  .worksList a::after {
+    position: absolute;
+    content: "";
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/hover_line_long.png);
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform 0.4s;
+  }
+
+  .worksList a:hover::after {
     transform: scale(1, 1);
   }
 }
