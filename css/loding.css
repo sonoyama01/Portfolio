@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/*========= レイアウトのためのCSS ===============*/
+
+body {
+  /* ============================
+  * 背景
+  * ========================= */
+  background-image: url("../images/bg_top@2x-80.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/*SVGのサイズ*/
+svg {
+  max-width: 369.998 px; /*SVGタグの横幅*/
+  width: 100%; /* レスポンシブ対応にするため100%を指定*/
+  height: auto;
+}
+
+/*========= 手書き風にするためのCSS ===============*/
+
+/* マスクをするパスの設定*/
+#mask .st0 {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 50; /*線の太さを指定する*/
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1500; /* 線の間隔を指定する */
+  stroke-dashoffset: 1500; /* 線の位置を指定する */
+}
