@@ -338,7 +338,7 @@ h3::before {
 #works {
   margin-bottom: 150px;
 }
-.more.others {
+#others > .more {
   display: none;
 }
 
