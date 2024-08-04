@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRRRRIP.</title>
+    <title>バナー</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=BIZ+UDPMincho&family=Frank+Ruhl+Libre:wght@300..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/trrrrip.css">
+    <link rel="stylesheet" href="./css/banner.css">
     <script>
         (function (d) {
             var config = {
@@ -22,6 +22,7 @@
                 h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
+
 </head>
 
 <body>
@@ -108,39 +109,41 @@
         <h1 class="lang_script">Works
             <span class="title_ja">制作実績</span>
         </h1>
+        <ul class="flex worksList">
+            <li class="flex_item hide_sp">
+                <a class="long_line" href="web_design.html">Webデザイン</a>
+            </li>
+            <li class="flex_item"><span class="short_line">バナー</span></li>
+            <li class="flex_item hide_sp"><a class="short_line" href="others.html">その他</a></li>
+        </ul>
 
-        <!-- コンテンツ -->
-        <div class="banner_img">
-            <img src="./images/banner_trrrrip.jpg" alt="TRRRRIP.のバナー">
-        </div>
-
-        <section id="intoro">
-            <p class="small">バナー</p>
-            <h2>TRRRRIP.</h2>
-            <p class="intoro">旅行アプリのWeb広告用のバナーを作成しました。<br>
-                Photoshopで写真の合成・切り抜きを行い、タブレットにはめ込んでいます。</p>
-            <img src="./images/line_tool@2x.png" alt="">
-            <div class="tool">
-                <dl>
-                    <div class="tool_item">
-                        <dt>制作範囲</dt>
-                        <dd>デザイン(トレース)</dd>
-                    </div>
-                    <div class="tool_item">
-                        <dt>使用ツール</dt>
-                        <dd>Illustlator / Photoshop</dd>
-                    </div>
-                </dl>
+        <section id="works">
+            <h2>works</h2>
+            <div class="grid">
+                <div class="grid_item">
+                    <a href="dezasuta_mobile.html"><img src="./images/mokku_dezasuta_mobile@2x.png"
+                            alt="デザスタmobileのモックアップ">
+                        <p>デザスタmobile</p>
+                    </a>
+                </div>
+                <div class="grid_item">
+                    <a href="trrrrip.html"><img src="./images/mokku_trrrrip@2x.png" alt="TRRRRIP.のモックアップ">
+                        <p>TRRRRIP.</p>
+                    </a>
+                </div>
+                <div class="grid_item">
+                    <a href="dx_burger_pop.html"><img src="./images/mokku_dx_burger_pop@2x.png"
+                            alt="デラックスバーガー【POP】のモックアップ">
+                        <p>デラックスバーガー【POP】</p>
+                    </a>
+                </div>
+                <div class="grid_item">
+                    <a href="dx_burger_rux.html"><img src="./images/mokku_dx_burger_rux@2x.png" alt="デラックスバーガーのモックアップ">
+                        <p>デラックスバーガー</p>
+                    </a>
+                </div>
             </div>
         </section>
-
-        <div class="worksList">
-            <div class="worksList_item"><a class="long_line" href="web_design.html">Webデザイン</a>
-            </div>
-            <div class="worksList_item"><a class="short_line" href="banner.html">バナー</a></div>
-            <div class="worksList_item"><a class="short_line" href="others.html">その他</a></div>
-        </div>
-
     </div>
 
     <!-- フッター -->
@@ -152,6 +155,7 @@
     <!-- スクリプト -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/script.js"></script>
+
 
 </body>
 
