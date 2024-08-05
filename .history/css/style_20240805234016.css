@@ -29,73 +29,6 @@
   --rem: 1rem/16;
 }
 
-/* ============================
-* loading
-* ========================= */
-#loading__outer {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background-image: url(../images/bg_top@2x-80.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  opacity: 0;
-  /* 初期状態は透明にする */
-  transition: opacity 0.5s ease;
-  /* アニメーションを適用 */
-  pointer-events: none;
-  /* 背後のコンテンツにマウスイベントが影響しないようにする */
-}
-
-#loading__outer.active {
-  opacity: 1;
-  transition: opacity 0.5s ease;
-  /* アニメーションを適用 */
-}
-
-#loading {
-  width: 50%;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#text path {
-  fill: #401f0f;
-  /* 塗りの色 */
-}
-
-#mask path {
-  fill: none;
-  /* 塗りの色 */
-  stroke: #ffffff;
-  /* 線の色 */
-  stroke-width: 12px;
-  /* 線幅 */
-  stroke-linecap: round;
-  /* 線端の形状 */
-  stroke-linejoin: round;
-  /* 角の形状 */
-}
-
-.hidden {
-  display: none;
-}
-
-/* JS が無効なときのスタイル */
-@media (scripting: none) {
-  #loading__outer {
-    display: none;
-  }
-
-  .hidden {
-    display: block;
-  }
-}
-
 body {
   /* ============================
   * 背景
@@ -155,10 +88,6 @@ body {
 img {
   width: 100%;
   height: auto;
-}
-
-.footprints {
-  display: none;
 }
 
 /* ============================
@@ -358,10 +287,6 @@ h2 {
   left: 95%;
 }
 
-.about_foot {
-  display: none;
-}
-
 /* ============================
 * Top_Works
 * ========================= */
@@ -549,24 +474,6 @@ footer small {
   /* ============================
   * MAIN
   * ========================= */
-  /* ============================
-* 足跡
-* ========================= */
-  .footprints {
-    display: block;
-    position: relative;
-  }
-
-  .footprint {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    width: 50px;
-    right: 15%;
-  }
-  .footprint.left {
-    transform: scaleX(-1);
-  }
   /* コンテンツ幅 */
   /* ========================= */
   .wrap {
@@ -593,14 +500,6 @@ footer small {
   .mv-about {
     max-width: 176px;
     margin: 0 auto;
-  }
-  .about_foot {
-    display: block;
-    width: 256px;
-    margin: 0 auto;
-  }
-  #about .wrap {
-    margin-bottom: 50px;
   }
 
   h3 {

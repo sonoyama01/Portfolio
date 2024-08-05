@@ -1,5 +1,5 @@
 @charset "utf-8";
-/* .content {
+.content {
   padding: 50px;
 }
 
@@ -17,7 +17,7 @@
 }
 .footprint.left {
   transform: scaleX(-1);
-} */
+}
 
 :root {
   --min-viewport-width: 375;
@@ -155,10 +155,6 @@ body {
 img {
   width: 100%;
   height: auto;
-}
-
-.footprints {
-  display: none;
 }
 
 /* ============================
@@ -358,10 +354,6 @@ h2 {
   left: 95%;
 }
 
-.about_foot {
-  display: none;
-}
-
 /* ============================
 * Top_Works
 * ========================= */
@@ -549,24 +541,6 @@ footer small {
   /* ============================
   * MAIN
   * ========================= */
-  /* ============================
-* 足跡
-* ========================= */
-  .footprints {
-    display: block;
-    position: relative;
-  }
-
-  .footprint {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    width: 50px;
-    right: 15%;
-  }
-  .footprint.left {
-    transform: scaleX(-1);
-  }
   /* コンテンツ幅 */
   /* ========================= */
   .wrap {
@@ -593,14 +567,6 @@ footer small {
   .mv-about {
     max-width: 176px;
     margin: 0 auto;
-  }
-  .about_foot {
-    display: block;
-    width: 256px;
-    margin: 0 auto;
-  }
-  #about .wrap {
-    margin-bottom: 50px;
   }
 
   h3 {

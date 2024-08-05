@@ -2,51 +2,31 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Story</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=BIZ+UDPMincho&family=Frank+Ruhl+Libre:wght@300..900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="./css/style.css" />
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
     <script>
         (function (d) {
             var config = {
-                kitId: "nns2ewd",
+                kitId: 'nns2ewd',
                 scriptTimeout: 3000,
-                async: true,
+                async: true
             },
-                h = d.documentElement,
-                t = setTimeout(function () {
-                    h.className =
-                        h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-                }, config.scriptTimeout),
-                tk = d.createElement("script"),
-                f = false,
-                s = d.getElementsByTagName("script")[0],
-                a;
-            h.className += " wf-loading";
-            tk.src = "https://use.typekit.net/" + config.kitId + ".js";
-            tk.async = true;
-            tk.onload = tk.onreadystatechange = function () {
-                a = this.readyState;
-                if (f || (a && a != "complete" && a != "loaded")) return;
-                f = true;
-                clearTimeout(t);
-                try {
-                    Typekit.load(config);
-                } catch (e) { }
-            };
-            s.parentNode.insertBefore(tk, s);
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
         })(document);
     </script>
-    <link rel="stylesheet" href="./css/loding.css" />
+
 </head>
 
 <body>
+    <!-- ローディング画面 -->
     <div id="loading__outer">
         <svg version="1.1" id="loading" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             width="380.16" height="165.81" viewBox="0 0 380.16 165.81">
@@ -78,11 +58,15 @@
             </g>
         </svg>
     </div>
+
     <div class="contents hidden">
-        <!-- 足跡 -->
-        <div id="footprintsContainer" class="footprints">
-            <img src="./images/right_foot.svg" id="footprintTemplate" class="footprint">
-        </div>
+        <!-- 足跡
+        <div class="content">
+            <div id="footprintsContainer" class="footprints">
+                <img src="./images/right_foot.svg" id="footprintTemplate" class="footprint">
+            </div>
+        </div> -->
+
         <!-- ヘッダー -->
         <header>
             <div class="header_wrap">
@@ -211,12 +195,8 @@
                 <div class="more lang_en about">
                     <a href="about.html">more<span class="button_arrow"></span></a>
                 </div>
-
             </div>
         </section>
-        <div class="about_foot wrap">
-            <img src="./images/foot_about@2x.png" alt="">
-        </div>
         <section id="works">
             <div class="wrap">
                 <div class="flex">
@@ -305,16 +285,16 @@
         <div class="contact">
             <a href="contact.html"><img src="./images/contact@2x.png" alt="contact"></a>
         </div>
-    </div>
 
+    </div>
     <!-- スクリプト -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- ローディング -->
+    <script src="./js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
-    <script src="./js/vivus.min.js"></script>
-    <script src="./js/script.js"></script>
+
 </body>
 
 </html>

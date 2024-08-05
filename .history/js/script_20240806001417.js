@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const footprints = document.querySelectorAll('.footprint');
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       const windowHeight = window.innerHeight;
-      const triggerPoint = scrollTop + windowHeight /1.75; // 画面中央のラインで足跡を表示
-      const triggerPointHide=scrollTop+70 // 画面中央のラインで足跡を消す
+      const triggerPoint = scrollTop + windowHeight -100; // 画面中央のラインで足跡を表示
+      const triggerPointHide=scrollTop+50 // 画面中央のラインで足跡を消す
 
       footprints.forEach((footprint, index) => {
           const footprintTop = parseFloat(footprint.style.top);

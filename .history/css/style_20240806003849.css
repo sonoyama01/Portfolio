@@ -157,10 +157,6 @@ img {
   height: auto;
 }
 
-.footprints {
-  display: none;
-}
-
 /* ============================
 * ヘッダー
 * ========================= */
@@ -553,7 +549,6 @@ footer small {
 * 足跡
 * ========================= */
   .footprints {
-    display: block;
     position: relative;
   }
 

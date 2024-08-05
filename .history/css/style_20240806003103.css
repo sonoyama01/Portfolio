@@ -157,8 +157,22 @@ img {
   height: auto;
 }
 
+/* ============================
+* 足跡
+* ========================= */
 .footprints {
-  display: none;
+  position: relative;
+}
+
+.footprint {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  width: 50px;
+  right: 15%;
+}
+.footprint.left {
+  transform: scaleX(-1);
 }
 
 /* ============================
@@ -549,24 +563,6 @@ footer small {
   /* ============================
   * MAIN
   * ========================= */
-  /* ============================
-* 足跡
-* ========================= */
-  .footprints {
-    display: block;
-    position: relative;
-  }
-
-  .footprint {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    width: 50px;
-    right: 15%;
-  }
-  .footprint.left {
-    transform: scaleX(-1);
-  }
   /* コンテンツ幅 */
   /* ========================= */
   .wrap {
@@ -597,10 +593,6 @@ footer small {
   .about_foot {
     display: block;
     width: 256px;
-    margin: 0 auto;
-  }
-  #about .wrap {
-    margin-bottom: 50px;
   }
 
   h3 {
