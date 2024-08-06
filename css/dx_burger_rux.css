@@ -490,4 +490,10 @@ footer small {
   .short_line {
     padding: 0 1.43em;
   }
+
+  @media screen and (max-width: 410px) {
+    .worksList a::after {
+      background-image: none;
+    }
+  }
 }

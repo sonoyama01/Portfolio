@@ -226,7 +226,7 @@ h1 {
   line-height: 1;
   text-align: center;
   margin-top: 54px;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 }
 .title_ja {
   font-size: clamp(
@@ -244,10 +244,14 @@ h1 {
   display: block;
 }
 
-.mokku {
+/* ============================
+* コンテン
+* ========================= */
+.banner_img {
   margin-bottom: 40px;
   width: 100%;
 }
+
 .small {
   font-size: calc(12 * var(--rem));
   line-height: 1;
@@ -387,6 +391,10 @@ footer small {
     max-width: 660px;
     margin: 0 10% 0 30%;
   }
+
+  h1 {
+    margin-bottom: 100px;
+  }
   .tool {
     margin-bottom: 130px;
   }
@@ -482,10 +490,11 @@ footer small {
   .short_line {
     padding: 0 1.43em;
   }
-
   @media screen and (max-width: 410px) {
     .worksList a::after {
       background-image: none;
+      border-bottom: solid 2px #401f0f;
+      bottom: 0;
     }
   }
 }
