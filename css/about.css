@@ -489,7 +489,6 @@ footer small {
 .about_img {
   position: relative;
   display: block;
-  cursor: pointer;
   height: 250px;
 }
 .about_img img {
